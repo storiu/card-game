@@ -12,6 +12,8 @@ export class CardsComponent implements OnInit {
 
   cards: Card[] = [];
 
+  CardStatus = CardStatus;
+
   constructor() { }
 
   ngOnInit(): void {

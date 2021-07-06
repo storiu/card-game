@@ -1,0 +1,29 @@
+.flip {
+  @apply w-64 h-96 mx-10 cursor-pointer;
+  perspective: 600px;
+}
+
+.flip-content {
+  @apply w-full h-full;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+}
+
+.flip.opened .flip-content {
+  transform: rotateY(180deg);
+  transition: transform 0.3s;
+}
+
+.flip-front, .flip-back {
+  @apply absolute w-full h-full p-4 border-2 shadow-2xl rounded-3xl text-red-500;
+  backface-visibility: hidden;
+}
+
+.flip-front {
+  @apply bg-green-600;
+}
+
+.flip-back {
+  @apply flex justify-center items-center;
+  transform: rotateY(180deg);
+}
