@@ -1,1 +1,9 @@
-<p>cards works!</p>
+<table>
+  <tbody>
+  <tr>
+    <td *ngFor="let card of cards; let i = index" (click)="flipCard(i)">
+      Card {{ i + 1 }} - {{ card.status }}
+    </td>
+  </tr>
+  </tbody>
+</table>
