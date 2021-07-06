@@ -1,5 +1,16 @@
 module.exports = {
-  purge: [],
+  purge: {
+    enabled: true,
+    mode: 'all',
+    preserveHtmlElements: false,
+    content: [
+      './src/**/*.html',
+      './src/**/*.ts',
+    ],
+    options: {
+      keyframes: true,
+    },
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
