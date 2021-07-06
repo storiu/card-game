@@ -17,14 +17,18 @@ export class CardsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.cards = Array.apply(null, Array(this.count)).map(() => ({
-      status: CardStatus.Down
-    }));
+    this.render();
   }
 
   flipCard(index: number): void {
     this.cards.forEach(card => card.status = CardStatus.Down);
     this.cards[index].status = CardStatus.Up;
+  }
+
+  render(count?: number): void {
+    this.cards = Array.apply(null, Array(count || this.count)).map(() => ({
+      status: CardStatus.Down
+    }));
   }
 
 }
