@@ -1,6 +1,6 @@
 <table>
   <tbody>
-  <tr>
+  <tr class="flex justify-center flex-wrap">
     <td *ngFor="let card of cards; let i = index" (click)="flipCard(i)">
       <div class="flip" [class.opened]="card.status === CardStatus.Up">
         <div class="flip-content">
